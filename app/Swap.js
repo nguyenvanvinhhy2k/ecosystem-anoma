@@ -286,7 +286,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-6">
       <div className="max-w-5xl mx-auto mb-[30px] font-bold text-center mt-[20px] text-[26px]">Anoma Multichain Intents — swap, staking, sending, receiving</div>
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Balances */}
         <div className="bg-white/5 border border-white/10 rounded-xl p-4">
@@ -314,7 +314,7 @@ export default function App() {
               placeholder="Amount"
               value={swapAmount}
               onChange={(e) => setSwapAmount(e.target.value)}
-              className="flex-1 bg-white/10 p-2 rounded"
+              className="sm:flex-1 w-[40%] bg-white/10 p-2 rounded"
             />
             <select
               value={fromToken}

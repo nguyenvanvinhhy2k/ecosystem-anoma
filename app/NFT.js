@@ -134,7 +134,7 @@ const spin = () => {
   const nextCount = (typeof spinCount === "number" ? spinCount + 1 : 1);
   setSpinCount(nextCount);
 
-  const isForced = nextCount > 15;
+  const isForced = nextCount > 8;
   const forcedIndex = isForced ? Math.floor(Math.random() * symbols.length) : -1;
 
   if (!isPlaying) {

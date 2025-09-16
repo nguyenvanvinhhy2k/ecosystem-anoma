@@ -109,7 +109,7 @@ export default function Bot() {
           {messages.map((m, i) => {
                 const isLast = i === m.length - 1;
                 return (
-                <div className={`flex mb-2 ${m.role === "user" ? 'justify-end' : 'justify-start'}`}>
+                <div key={i} className={`flex mb-2 ${m.role === "user" ? 'justify-end' : 'justify-start'}`}>
                 {m.role === "user" ? (
                 <div className="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white rounded-tr-xl rounded-bl-xl rounded-tl-xl max-w-[70%] p-2 shadow-lg text-sm backdrop-blur">
                   {m.text}

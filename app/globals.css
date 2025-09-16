@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --foreground: #171717;
+}
+
+@layer base {
+  .font-signature {
+    /* font-family: 'Dancing Script', cursive; */
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px black; /* Viền đen */
+  }
+
+  .text-stroke-2 {
+    -webkit-text-stroke: 2px black; /* Viền dày hơn */
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 2px white;
+  }
+
+  .text-stroke-pink {
+    -webkit-text-stroke: 2px hotpink;
+  }
+
+  .text-stroke-glow {
+    -webkit-text-stroke: 2px #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  width: 100%;
+  color: var(--foreground);
+  height: 100%;
+  background: var(--background);
+  /* font-family: Playpen Sans, cursive; */
+}
+
+@media (min-width: 768px) {
+  body {
+    font-family: Playpen Sans, cursive;
+  }
+}
+
+/* 3D rotate y-axis */
+@layer utilities {
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+  .-rotate-y-180 {
+    transform: rotateY(-180deg);
+  }
+  .perspective-\[1500px\] {
+    perspective: 1500px;
+  }
+}
+
+
+/* Ẩn scrollbar nhưng vẫn scroll được */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+  overflow: hidden; 
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@keyframes subtle-scale {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.animate-subtle-scale { animation: subtle-scale 2.5s ease-in-out infinite; }
+
+
+
+/* 3D rotate y-axis */
+@layer utilities {
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+  .-rotate-y-180 {
+    transform: rotateY(-180deg);
+  }
+  .perspective-\[1500px\] {
+    perspective: 1500px;
+  }
+}
+
+.font-signature {
+  font-family: Dancing Script, cursive;
+}
+
+/* Ẩn scrollbar nhưng vẫn scroll được */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+  overflow: hidden; 
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@keyframes spinReel {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+.animate-spinReel {
+  animation: spinReel 1s linear infinite; /* 1s mỗi vòng, loop liên tục */
+}
+
+@keyframes lever-pull-down {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(80px); } /* cần gạt xuống */
+  100% { transform: translateY(0); }   /* trở lại */
+}
+
+.animate-lever {
+  animation: lever-pull-down 0.6s ease-in-out;
+}
+
+@keyframes lever-pull {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-lever {
+  animation: lever-pull 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes lever-pull {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-lever {
+  animation: lever-pull 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                0 0 40px rgba(255, 215, 0, 0.6),
+                0 0 60px rgba(255, 215, 0, 0.4);
+    border-color: #FFD700;
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+                0 0 20px rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+  }
+}
+
+.animate-glow {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes lever-pull-down {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(80px); }
+  100% { transform: translateY(0); }
+}
+.animate-lever {
+  animation: lever-pull-down 0.6s ease-in-out;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); }
+  50% { box-shadow: 0 0 40px rgba(255, 215, 0, 1); }
+}
+.animate-glow {
+  animation: glow 1s infinite;
+}
+
